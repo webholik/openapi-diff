@@ -37,4 +37,14 @@ The command will exit with an exit code 1 if any breaking changes were found, so
 this happens.
 
 ## Feature support
-See [SPEC_SUPPORT.md](SPEC_SUPPORT.md)
+See [SPEC_SUPPORT.md](SPEC_SUPPORT.md) for details on which Swagger/OpenApi keywords the tool currently supports 
+detecting differences within.
+
+## Changelog
+See [CHANGELOG.md](CHANGELOG.md)
+
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## License
+See [LICENSE.txt](LICENSE.txt)
