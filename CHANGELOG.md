@@ -1,3 +1,13 @@
+<a name="0.22.0"></a>
+# [0.22.0](https://bitbucket.org/atlassian/openapi-diff/compare/0.21.0...0.22.0) (2019-04-09)
+
+
+### Features
+
+* add support for minItems,  maxItems, minProperties, maxProperties and allOf keywords in request and response bodies ([96987f8](https://bitbucket.org/atlassian/openapi-diff/commits/96987f8))
+
+
+
 <a name="0.21.0"></a>
 # [0.21.0](https://bitbucket.org/atlassian/openapi-diff/compare/0.20.0...0.21.0) (2019-02-28)
 
