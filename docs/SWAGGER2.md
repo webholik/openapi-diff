@@ -21,7 +21,7 @@ This is a list of all the relevant field names in Swagger 2 and if the validatio
 
 | Field Name | Supported |
 | --- | --- |
-| $ref | yes |
+| $ref | partial, yes for internal non-circular references, no for external references, no for circular references |
 | get | yes |
 | put | yes |
 | post | yes |
