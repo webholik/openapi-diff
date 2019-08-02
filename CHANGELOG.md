@@ -1,3 +1,29 @@
+<a name="0.23.0"></a>
+# [0.23.0](https://bitbucket.org/atlassian/openapi-diff/compare/0.22.0...0.23.0) (2019-08-02)
+
+
+### Features
+
+* update supported node versions, migrate to use swagger-parser v8.0.0 and general bumps ([6007c86](https://bitbucket.org/atlassian/openapi-diff/commits/6007c86))
+
+
+### BREAKING CHANGES
+
+* There are two breaking changes in this release:
+
+1) nodejs 6.x is not supported anymore
+
+To migrate from older versions, please start using nodejs 8.x or above.
+
+2) `swagger-parser` v8.0.0 is now used, which enforces specs to follow the official JSON Schemas for Swagger2 and OpenApi3
+
+This change might cause errors where `swagger-parser` complains about specs being invalid.
+To migrate from older versions, please address any validation errors returned by this library.
+More information about this can be found here:
+  https://github.com/APIDevTools/swagger-parser/blob/master/CHANGELOG.md
+
+
+
 <a name="0.22.0"></a>
 # [0.22.0](https://bitbucket.org/atlassian/openapi-diff/compare/0.21.0...0.22.0) (2019-04-09)
 
