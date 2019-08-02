@@ -108,7 +108,7 @@ export const findDiffsInXProperties = (
                 `${xPropertyContainerName}.${xPropertyName}`
             );
         })
-        .flatten<Difference>()
+        .flatten()
         .value();
 
     return xPropertyDiffs;

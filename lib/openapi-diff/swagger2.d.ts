@@ -4,7 +4,9 @@ import {
     Header,
     Operation,
     Parameter,
-    Path, Reference,
+    ParameterType,
+    Path,
+    Reference,
     Response,
     Schema,
     Spec
@@ -13,6 +15,7 @@ import {
 export type Swagger2 = Spec & Swagger2XProperties;
 export type Swagger2BodyParameter = BodyParameter;
 export type Swagger2Parameter = Parameter;
+export type Swagger2ParameterType = ParameterType;
 export type Swagger2PathItem = Path;
 export type Swagger2Operation = Operation;
 export type Swagger2Reference = Reference;

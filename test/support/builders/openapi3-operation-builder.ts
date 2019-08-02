@@ -1,7 +1,7 @@
 import {OpenApi3Operation, OpenApi3Responses} from '../../../lib/openapi-diff/openapi3';
 import {buildMapFromBuilders, setPropertyFromBuilderIfDefined} from './builder-utils';
 import {OpenApi3RequestBodyBuilder} from './openapi3-request-body-builder';
-import {OpenApi3ResponseBuilder} from './openapi3-response-builder';
+import {openApi3ResponseBuilder, OpenApi3ResponseBuilder} from './openapi3-response-builder';
 import {RefObjectBuilder} from './ref-object-builder';
 
 interface OperationBuilderState {
@@ -14,7 +14,9 @@ interface OperationBuilderState {
 export class OpenApi3OperationBuilder {
     public static defaultOpenApi3OperationBuilder(): OpenApi3OperationBuilder {
         return new OpenApi3OperationBuilder({
-            responses: {}
+            responses: {
+                100: openApi3ResponseBuilder
+            }
         });
     }
 

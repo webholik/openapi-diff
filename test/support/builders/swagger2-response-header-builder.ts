@@ -1,7 +1,7 @@
-import {Swagger2ResponseHeader} from '../../../lib/openapi-diff/swagger2';
+import {Swagger2ParameterType, Swagger2ResponseHeader} from '../../../lib/openapi-diff/swagger2';
 
 interface Swagger2ResponseHeaderBuilderState {
-    type: string;
+    type: Swagger2ParameterType;
 }
 
 export class Swagger2ResponseHeaderBuilder {

@@ -2,7 +2,7 @@
 > A CLI tool to identify differences between Swagger/OpenAPI specs.
 
 ## Requirements
-- nodejs 6.x or higher (tested using 6.x, 8.x, 10.x and 11.x)
+- nodejs 8.x or higher (tested using 8.x, 10.x and 12.x)
 - npm 3.x or higher (tested using 3.x and 6.x)
 
 ## Installation

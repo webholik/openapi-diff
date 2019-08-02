@@ -2,22 +2,17 @@ pipelines:
   default:
   - parallel:
     - step:
-        name: 'Node 6.x'
-        image: node:6.16.0
-        script:
-        - ./bin/build.sh
-    - step:
         name: 'Node 8.x'
         image: node:8.15.0
         script:
         - ./bin/build.sh
     - step:
         name: 'Node 10.x'
-        image: node:10.15.1
+        image: node:10.16.0
         script:
         - ./bin/build.sh
     - step:
-        name: 'Node 11.x'
-        image: node:11.10.0
+        name: 'Node 12.x'
+        image: node:12.7.0
         script:
         - ./bin/build.sh

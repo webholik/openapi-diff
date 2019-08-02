@@ -1,4 +1,4 @@
-import {OpenApi3RequestBody} from '../../../lib/openapi-diff/openapi3';
+import {OpenApi3Content, OpenApi3RequestBody} from '../../../lib/openapi-diff/openapi3';
 import {buildMapFromBuilders} from './builder-utils';
 import {OpenApi3MediaTypeBuilder} from './openapi3-media-type-builder';
 
@@ -26,7 +26,7 @@ export class OpenApi3RequestBodyBuilder {
     }
 
     public build(): OpenApi3RequestBody {
-        const content = buildMapFromBuilders(this.state.content);
+        const content: OpenApi3Content = buildMapFromBuilders(this.state.content);
         return {
             content,
             required: this.state.required

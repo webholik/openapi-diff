@@ -1,11 +1,13 @@
 import {
     ComponentsObject,
+    ContentObject,
     HeaderObject,
     HeadersObject,
     MediaTypeObject,
     OpenAPIObject,
     OperationObject,
-    PathItemObject, PathsObject,
+    PathItemObject,
+    PathsObject,
     ReferenceObject,
     RequestBodyObject,
     ResponseObject,
@@ -15,6 +17,7 @@ import {
 
 export type OpenApi3 = OpenAPIObject;
 export type OpenApi3Components = ComponentsObject;
+export type OpenApi3Content = ContentObject;
 export type OpenApi3MediaType = MediaTypeObject;
 export type OpenApi3Operation = OperationObject;
 export type OpenApi3PathItem = PathItemObject;

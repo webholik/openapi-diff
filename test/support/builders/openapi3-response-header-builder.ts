@@ -4,6 +4,7 @@ import {setPropertyIfDefined} from './builder-utils';
 interface OpenApi3ResponseHeaderBuilderState {
     ref?: string;
     required?: boolean;
+    schema?: object;
 }
 
 export class OpenApi3ResponseHeaderBuilder {
@@ -26,11 +27,16 @@ export class OpenApi3ResponseHeaderBuilder {
         return new OpenApi3ResponseHeaderBuilder({...this.state, required});
     }
 
+    public withEmptySchema(): OpenApi3ResponseHeaderBuilder {
+        return new OpenApi3ResponseHeaderBuilder({...this.state, schema: {}});
+    }
+
     public build(): OpenApi3ResponseHeader {
         const header: OpenApi3ResponseHeader = {};
 
         setPropertyIfDefined(header, '$ref', this.state.ref);
         setPropertyIfDefined(header, 'required', this.state.required);
+        setPropertyIfDefined(header, 'schema', this.state.schema);
 
         return header;
     }

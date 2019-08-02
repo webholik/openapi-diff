@@ -27,6 +27,7 @@ describe('openapi-diff response headers', () => {
                 .withOperation(defaultMethod, openApi3OperationBuilder
                     .withResponse(defaultStatusCode, openApi3ResponseBuilder
                         .withHeader(headerName, openApi3ResponseHeaderBuilder
+                            .withEmptySchema()
                             .withRequiredValue(requiredValue)))));
     };
 
@@ -54,6 +55,7 @@ describe('openapi-diff response headers', () => {
                 specEntityDetailsBuilder
                     .withLocation(baseHeadersChangeLocation.concat(`.${headerName}`))
                     .withValue(openApi3ResponseHeaderBuilder
+                        .withEmptySchema()
                         .withRequiredValue(false)
                         .build()
                     )
@@ -71,6 +73,7 @@ describe('openapi-diff response headers', () => {
                 specEntityDetailsBuilder
                     .withLocation(baseHeadersChangeLocation.concat(`.${headerName}`))
                     .withValue(openApi3ResponseHeaderBuilder
+                        .withEmptySchema()
                         .withRequiredValue(false)
                         .build()
                     )
@@ -90,6 +93,7 @@ describe('openapi-diff response headers', () => {
                 specEntityDetailsBuilder
                     .withLocation(baseHeadersChangeLocation.concat(`.${headerName}`))
                     .withValue(openApi3ResponseHeaderBuilder
+                        .withEmptySchema()
                         .withRequiredValue(true)
                         .build()
                     )
@@ -107,6 +111,7 @@ describe('openapi-diff response headers', () => {
                 specEntityDetailsBuilder
                     .withLocation(baseHeadersChangeLocation.concat(`.${headerName}`))
                     .withValue(openApi3ResponseHeaderBuilder
+                        .withEmptySchema()
                         .withRequiredValue(true)
                         .build()
                     )
@@ -191,6 +196,7 @@ describe('openapi-diff response headers', () => {
                 .withOperation(defaultMethod, openApi3OperationBuilder
                     .withResponse(defaultStatusCode, openApi3ResponseBuilder
                         .withHeader('x-some-optional-header', openApi3ResponseHeaderBuilder
+                            .withEmptySchema()
                             .withNoRequiredValue()))));
         const destinationSpec = createSpecWithNoHeaders();
 
@@ -206,6 +212,7 @@ describe('openapi-diff response headers', () => {
                     specEntityDetailsBuilder
                         .withLocation(baseHeadersChangeLocation.concat('.x-some-optional-header'))
                         .withValue(openApi3ResponseHeaderBuilder
+                            .withEmptySchema()
                             .withNoRequiredValue()
                             .build()
                         )
@@ -219,6 +226,7 @@ describe('openapi-diff response headers', () => {
         const sourceSpec = openApi3SpecBuilder
             .withComponents(openApi3ComponentsBuilder
                 .withHeader('headerReference', openApi3ResponseHeaderBuilder
+                    .withEmptySchema()
                     .withRequiredValue(true)))
             .withPath(defaultPath, openApi3PathItemBuilder
                 .withOperation(defaultMethod, openApi3OperationBuilder
@@ -254,6 +262,7 @@ describe('openapi-diff response headers', () => {
                     .withMediaType('application/xml', openApi3MediaTypeBuilder
                         .withSchemaRef('#/x-circular-schema/schemaThatPreventsDereferencing'))
                     .withHeader('x-some-optional-header', openApi3ResponseHeaderBuilder
+                        .withEmptySchema()
                         .withRequiredValue(false))))
             .withPath(defaultPath, openApi3PathItemBuilder
                 .withOperation(defaultMethod, openApi3OperationBuilder

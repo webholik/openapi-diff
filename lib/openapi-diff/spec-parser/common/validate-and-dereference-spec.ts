@@ -10,7 +10,7 @@ export const validateAndDereferenceSpec = async <T extends Swagger2 | OpenApi3>(
         const options: any = {
             dereference: {circular: 'ignore'}
         };
-        return await SwaggerParser.validate(spec as any, options);
+        return await SwaggerParser.validate(spec as any, options) as any;
     } catch (error) {
         throw new OpenApiDiffErrorImpl(
             'OPENAPI_DIFF_PARSE_ERROR',
