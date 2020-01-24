@@ -2,7 +2,7 @@
 
 const conventionalChangelog = require('gulp-conventional-changelog');
 const del = require('del');
-const exec = require('child_process').exec;
+const exec = require('./gulp/exec');
 const fs = require('fs');
 const git = require('gulp-git');
 const gulp = require('gulp');
@@ -23,13 +23,6 @@ const utilities = {
         const tsResult = tsProjectBuildOutput.src().pipe(tsProjectBuildOutput());
         return tsResult.js.pipe(gulp.dest('build-output'));
     },
-    exec: function(command, callback) {
-        exec(command, function(err, stdout, stderr) {
-            console.log(stdout);
-            console.log(stderr);
-            callback(err);
-        });
-    },
     getBumpType: function() {
         const validTypes = ['major', 'minor', 'patch', 'prerelease'];
         if (validTypes.indexOf(options.type) === -1) {
@@ -44,8 +37,8 @@ const utilities = {
     }
 };
 
-function bumpVersion(callback) {
-    utilities.exec(`npm version ${utilities.getBumpType()} --no-git-tag-version`, callback);
+function bumpVersion() {
+    return exec(`npm version ${utilities.getBumpType()} --no-git-tag-version`);
 }
 
 function changelog() {
@@ -97,8 +90,8 @@ function createNewTag(callback) {
     git.tag(version, `Created Tag for version: ${version}`, callback);
 }
 
-function lintCommits(callback) {
-    utilities.exec('./node_modules/.bin/conventional-changelog-lint --from=HEAD~20 --preset angular', callback);
+function lintCommits() {
+    return exec('./node_modules/.bin/commitlint --from=HEAD~20');
 }
 
 function lintTypeScript() {
@@ -107,8 +100,8 @@ function lintTypeScript() {
         .pipe(tslint.report());
 }
 
-function npmPublish(callback) {
-    utilities.exec('npm publish', callback);
+function npmPublish() {
+    return exec('npm publish');
 }
 
 function pushChanges(callback) {

@@ -3,16 +3,21 @@ pipelines:
   - parallel:
     - step:
         name: 'Node 8.x'
-        image: node:8.15.0
+        image: node:8.17.0
         script:
         - ./bin/build.sh
     - step:
         name: 'Node 10.x'
-        image: node:10.16.0
+        image: node:10.18.1
         script:
         - ./bin/build.sh
     - step:
         name: 'Node 12.x'
-        image: node:12.7.0
+        image: node:12.14.1
         script:
         - ./bin/build.sh
+    - step:
+        name: 'Node 13.x'
+        image: node:13.7.0
+        script:
+          - ./bin/build.sh

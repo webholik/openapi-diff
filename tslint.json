@@ -9,6 +9,7 @@
         "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
         "prefer-object-spread": false,
         "no-default-export": true,
-        "member-access": [true, "check-constructor"]
+        "member-access": [true, "check-constructor"],
+        "array-type": [true, "array-simple"]
     }
 }
