@@ -1,3 +1,8 @@
+<a name="0.23.1"></a>
+## [0.23.1](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.0...0.23.1) (2020-01-28)
+
+
+
 <a name="0.23.0"></a>
 # [0.23.0](https://bitbucket.org/atlassian/openapi-diff/compare/0.22.0...0.23.0) (2019-08-02)
 
