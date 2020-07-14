@@ -1,3 +1,13 @@
+<a name="0.23.2"></a>
+## [0.23.2](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.1...0.23.2) (2020-07-14)
+
+
+### Features
+
+* bump swagger-parser to 10.x ([915b407](https://bitbucket.org/atlassian/openapi-diff/commits/915b407)), closes [#12](https://bitbucket.org/atlassian/openapi-diff/issue/12)
+
+
+
 <a name="0.23.1"></a>
 ## [0.23.1](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.0...0.23.1) (2020-01-28)
 
