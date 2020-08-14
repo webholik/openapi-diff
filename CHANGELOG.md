@@ -1,3 +1,13 @@
+<a name="0.23.3"></a>
+## [0.23.3](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.2...0.23.3) (2020-08-14)
+
+
+### Bug Fixes
+
+* bump json-schema-diff to the latest version to include bug fixes ([534e0c5](https://bitbucket.org/atlassian/openapi-diff/commits/534e0c5))
+
+
+
 <a name="0.23.2"></a>
 ## [0.23.2](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.1...0.23.2) (2020-07-14)
 
