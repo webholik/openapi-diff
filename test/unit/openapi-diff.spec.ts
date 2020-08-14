@@ -240,8 +240,6 @@ describe('openapi-diff', () => {
             ));
         });
 
-        // Needed until https://github.com/APIDevTools/json-schema-ref-parser/issues/36 is fixed
-        // When this issue is fixed, the expected error should be the same as the non-deep circle case in components
         it('should throw an error if the spec can not be parsed due to a deep circle in components', async () => {
             const specWithInvalidDeepCircles = openApi3SpecBuilder
                 .withComponents(openApi3ComponentsBuilder
@@ -268,7 +266,7 @@ describe('openapi-diff', () => {
 
             expect(mockResultReporter.reportError).toHaveBeenCalledWith(new OpenApiDiffErrorImpl(
                 'OPENAPI_DIFF_PARSE_ERROR',
-                'Validation errors in "source-spec.json": Maximum call stack size exceeded'
+                'the spec can not be parsed due to invalid circular references'
             ));
         });
     });
