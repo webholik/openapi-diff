@@ -71,12 +71,11 @@ const toContainDifferencesCompare = (
     expectedDifferences: Array<DiffResult<DiffResultType>>,
     util: MatchersUtil
 ): jasmine.CustomMatcherResult => {
-
     const allActualDifferences = getAllActualDifferences(actualDiffOutcome);
 
     const allCompareResults: jasmine.CustomMatcherResult[] = [
-        compareActualToExpectedDifferences(allActualDifferences, expectedDifferences, util.equals),
-        compareExpectedToActualDifferences(allActualDifferences, expectedDifferences, util.equals),
+        compareActualToExpectedDifferences(allActualDifferences, expectedDifferences, util.equals.bind(util)),
+        compareExpectedToActualDifferences(allActualDifferences, expectedDifferences, util.equals.bind(util)),
         compareBreakingDifferencesFoundFlag(actualDiffOutcome, expectedDifferences)
     ];
 
