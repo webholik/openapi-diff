@@ -58,6 +58,7 @@
     "jasmine": "^3.3.1",
     "json-schema-spec-types": "^0.1.2",
     "minimist": "^1.2.0",
+    "openapi-types": "^7.0.1",
     "tslint": "6.0.0",
     "typescript": "3.7.5"
   },
