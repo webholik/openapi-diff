@@ -40,7 +40,7 @@
     "@types/jasmine": "^3.5.14",
     "@types/js-yaml": "^3.12.5",
     "@types/lodash": "^4.14.161",
-    "@types/node": "^10.17.31",
+    "@types/node": "^10.17.32",
     "@types/request": "^2.48.5",
     "@types/swagger-schema-official": "^2.0.21",
     "@types/verror": "^1.10.4",
