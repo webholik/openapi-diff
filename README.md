@@ -2,7 +2,7 @@
 > A CLI tool to identify differences between Swagger or OpenApi specifications.
 
 ## Requirements
-- nodejs 8.x or higher (tested using 8.x, 10.x, 12.x and 13.x)
+- nodejs 10.x or higher (tested using 10.x, 12.x, 13.x and 14.x)
 - npm 6.x or higher (tested using 6.x)
 - Swagger 2 or OpenApi 3 specifications
 
@@ -15,7 +15,7 @@ npm install openapi-diff --save-dev
 
 ## Description
 
-This took identifies what has changed between two Swagger or OpenApi specification files. These changes are classified into three groups, breaking, non-breaking and unclassified. Using an approach based on set theory this tool is able to calculate these differences to a high level of accuracy.
+This tool identifies what has changed between two Swagger or OpenApi specification files. These changes are classified into three groups, breaking, non-breaking and unclassified. Using an approach based on set theory this tool is able to calculate these differences to a high level of accuracy.
 
 ### Supported Keywords
 
