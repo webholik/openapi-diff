@@ -1,3 +1,18 @@
+<a name="0.23.4"></a>
+## [0.23.4](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.3...0.23.4) (2020-11-13)
+
+
+### Chores
+
+* **deps:** update node.js to v14 ([b573373](https://bitbucket.org/atlassian/openapi-diff/commits/b573373))
+
+
+### BREAKING CHANGES
+
+* **deps:** Dropped support for node.js v8. Migrate to NodeJS v10 or above.
+
+
+
 <a name="0.23.3"></a>
 ## [0.23.3](https://bitbucket.org/atlassian/openapi-diff/compare/0.23.2...0.23.3) (2020-08-14)
 
