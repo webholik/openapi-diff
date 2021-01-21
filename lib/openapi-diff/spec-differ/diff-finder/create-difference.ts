@@ -2,7 +2,6 @@ import {
     DiffResultAction,
     DiffResultCode,
     DiffResultEntity,
-    DiffResultSource,
     DiffResultSpecEntityDetails
 } from '../../../api-types';
 import {ParsedProperty} from '../../spec-parser-types';
@@ -14,7 +13,6 @@ interface CreateDifferenceOptions {
     propertyName: string;
     action: DiffResultAction;
     details?: any;
-    source: DiffResultSource;
 }
 
 const findEntityForDiff = (propertyName: string): DiffResultEntity => {
@@ -37,7 +35,6 @@ export const createDifference = (options: CreateDifferenceOptions): Difference =
         code: `${entity}.${options.action}` as DiffResultCode,
         destinationSpecEntityDetails: options.destinationSpecOrigins.map(createSpecEntityDetails),
         entity,
-        source: options.source,
         sourceSpecEntityDetails: options.sourceSpecOrigins.map(createSpecEntityDetails)
     };
 

@@ -24,7 +24,6 @@ const findAdditionDiffsInXProperty = (
             action: 'add',
             destinationSpecOrigins: [destinationObject],
             propertyName,
-            source: 'openapi-diff',
             sourceSpecOrigins: []
         })];
     }
@@ -42,7 +41,6 @@ const findDeletionDiffsInXProperty = (
             action: 'remove',
             destinationSpecOrigins: [],
             propertyName,
-            source: 'openapi-diff',
             sourceSpecOrigins: [sourceObject]
         })];
     }
@@ -62,14 +60,12 @@ const findEditionDiffsInXProperty = (
                 action: 'add',
                 destinationSpecOrigins: [destinationObject],
                 propertyName,
-                source: 'openapi-diff',
                 sourceSpecOrigins: [sourceObject]
             }),
             createDifference({
                 action: 'remove',
                 destinationSpecOrigins: [destinationObject],
                 propertyName,
-                source: 'openapi-diff',
                 sourceSpecOrigins: [sourceObject]
             })
         ];

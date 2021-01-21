@@ -153,3 +153,5 @@ exports.watch = gulp.series(
 exports.watchE2e = function () {
     gulp.watch(['build-output/lib/**/*', 'build-output/test/e2e/**/*', 'test/e2e/**/*.json'], gulp.series(e2eTest));
 };
+
+exports.build = compileDist

@@ -1,7 +1,8 @@
-import {DiffOutcome, SpecFormat} from './api-types';
+import {SpecFormat} from './api-types';
 import {ContentLoader} from './openapi-diff/content-loader';
 import {ResultReporter} from './openapi-diff/result-reporter';
 import {SpecDiffer} from './openapi-diff/spec-differ';
+import {Difference} from './openapi-diff/spec-differ/diff-finder/difference';
 
 export type SpecFormatOrAuto = SpecFormat | 'auto-detect';
 
@@ -45,16 +46,13 @@ export class OpenApiDiff {
 
             this.resultReporter.reportOutcome(diffOutcome);
 
-            if (diffOutcome.breakingDifferencesFound) {
-                return Promise.reject(new Error('Breaking differences found'));
-            }
         } catch (error) {
             this.resultReporter.reportError(error);
             throw error;
         }
     }
 
-    public async diffSpecs(options: DiffSpecsOptions): Promise<DiffOutcome> {
+    public async diffSpecs(options: DiffSpecsOptions): Promise<Difference[]> {
         return SpecDiffer.diffSpecs(options);
     }
 

@@ -16,7 +16,6 @@ const createAddHeaderDifference = (header: ParsedHeader): Difference => {
         action: 'add',
         destinationSpecOrigins: [header.originalValue],
         propertyName: getHeaderDifferencePropertyName(header),
-        source: 'openapi-diff',
         sourceSpecOrigins: []
     });
 };
@@ -26,7 +25,6 @@ const createRemoveHeaderDifference = (header: ParsedHeader): Difference => {
         action: 'remove',
         destinationSpecOrigins: [],
         propertyName: getHeaderDifferencePropertyName(header),
-        source: 'openapi-diff',
         sourceSpecOrigins: [header.originalValue]
     });
 };

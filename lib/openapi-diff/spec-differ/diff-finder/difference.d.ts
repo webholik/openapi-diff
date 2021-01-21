@@ -12,6 +12,5 @@ interface Difference {
     entity: DiffResultEntity;
     sourceSpecEntityDetails: DiffResultSpecEntityDetails[];
     destinationSpecEntityDetails: DiffResultSpecEntityDetails[];
-    source: DiffResultSource;
     details?: any;
 }

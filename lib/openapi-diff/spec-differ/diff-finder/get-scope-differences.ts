@@ -59,7 +59,6 @@ const createScopeDifference = (options: CreateScopeDifferencesOptions): Differen
             differenceSchema: options.differenceSchema
         },
         propertyName: options.propertyName,
-        source: 'json-schema-diff',
         sourceSpecOrigins: createSpecOrigins(options.sourceParsedScope)
     });
 

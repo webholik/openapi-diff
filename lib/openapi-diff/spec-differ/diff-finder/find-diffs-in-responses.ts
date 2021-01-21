@@ -18,7 +18,6 @@ const findAddedDifferencesInResponses = (
             action: 'add',
             destinationSpecOrigins: [parsedResponse.originalValue],
             propertyName: 'response.status-code',
-            source: 'openapi-diff',
             sourceSpecOrigins: []
         });
     });
@@ -35,7 +34,6 @@ const findRemovedDifferencesInResponses = (
             action: 'remove',
             destinationSpecOrigins: [],
             propertyName: 'response.status-code',
-            source: 'openapi-diff',
             sourceSpecOrigins: [parsedResponse.originalValue]
         });
     });

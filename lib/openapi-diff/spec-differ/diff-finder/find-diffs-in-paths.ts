@@ -17,7 +17,6 @@ const findAddedPathDifferences = (
                 action: 'add',
                 destinationSpecOrigins: [addedDestinationPathItem.originalValue],
                 propertyName: 'path',
-                source: 'openapi-diff',
                 sourceSpecOrigins: []
             });
         });
@@ -33,7 +32,6 @@ const findRemovedPathDifferences = (
                 action: 'remove',
                 destinationSpecOrigins: [],
                 propertyName: 'path',
-                source: 'openapi-diff',
                 sourceSpecOrigins: [removedSourcePathItem.originalValue]
             });
         });

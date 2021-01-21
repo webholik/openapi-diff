@@ -17,7 +17,6 @@ const findAddedMethodDifferences = (
                 action: 'add',
                 destinationSpecOrigins: [addedDestinationOperation.originalValue],
                 propertyName: 'method',
-                source: 'openapi-diff',
                 sourceSpecOrigins: []
             });
         });
@@ -33,7 +32,6 @@ const findRemovedMethodDifferences = (
                 action: 'remove',
                 destinationSpecOrigins: [],
                 propertyName: 'method',
-                source: 'openapi-diff',
                 sourceSpecOrigins: [removedSourceOperation.originalValue]
             });
         });

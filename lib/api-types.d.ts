@@ -44,7 +44,6 @@ declare namespace OpenApiDiff {
         entity: DiffResultEntity;
         sourceSpecEntityDetails: DiffResultSpecEntityDetails[];
         destinationSpecEntityDetails: DiffResultSpecEntityDetails[];
-        source: DiffResultSource;
         details?: any;
         type: T;
     }
@@ -93,7 +92,7 @@ declare namespace OpenApiDiff {
 }
 
 declare interface OpenApiDiffStatic {
-    diffSpecs: (options: OpenApiDiff.OpenApiDiffOptions) => Promise<OpenApiDiff.DiffOutcome>;
+    diffSpecs: (options: OpenApiDiff.OpenApiDiffOptions) => Promise<any>;
 }
 
 declare const OpenApiDiff: OpenApiDiffStatic;
